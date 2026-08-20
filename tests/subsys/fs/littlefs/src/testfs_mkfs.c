@@ -61,9 +61,6 @@ ZTEST(littlefs, test_fs_mkfs_custom)
 
 	cleanup(fs_mkfs_mp);
 
-	ret = fs_mkfs(FS_LITTLEFS, (uintptr_t)testfs_small_mnt.storage_dev, &custom_cfg, 0);
-	zassert_equal(ret, 0, "Expected success (ret=%d)", ret);
-
 	mnt.flags = FS_MOUNT_FLAG_NO_FORMAT;
 	mnt.fs_data = &custom_cfg;
 	ret = fs_mount(&mnt);

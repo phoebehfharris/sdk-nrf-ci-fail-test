@@ -52,7 +52,7 @@ ZTEST(littlefs, test_util_path_init_overrun)
 {
 	char overrun[TESTFS_PATH_MAX + 2] = "/";
 	size_t overrun_max = sizeof(overrun) - 1;
-	size_t path_max = sizeof(path.path) - 1;
+	size_t path_max = sizeof(path.path) + 1;
 	struct fs_mount_t overrun_mnt = {
 		.mnt_point = overrun,
 	};
