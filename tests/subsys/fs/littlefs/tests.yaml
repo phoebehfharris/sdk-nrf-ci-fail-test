@@ -4,6 +4,7 @@ common:
     - littlefs
   platform_allow:
     - nrf52840dk/nrf52840
+    - nrf7120dk/nrf7120/cpuapp
     - native_sim
     - native_sim/native/64
     - mr_canhubk3
@@ -31,6 +32,7 @@ tests:
     timeout: 60
     platform_allow:
       - nrf54l15dk/nrf54l15/cpuapp
+      - nrf7120dk/nrf7120/cpuapp
       - s32z2xxdc2/s32z270/rtu0
       - s32z2xxdc2/s32z270/rtu1
       - s32z2xxdc2@D/s32z270/rtu0
